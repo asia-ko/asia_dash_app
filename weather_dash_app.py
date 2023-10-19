@@ -46,6 +46,8 @@ dropdown = dcc.Dropdown(['Berlin', 'Rome', 'New York'], "Berlin", clearable=Fals
 
 app =dash.Dash()
 
+server = app.server
+
 app.layout = html.Div([html.H1(children = 'Climate in Berlin, Rome and New York', style = {'textAlign': 'center',
                                                                         'color': 'purple'}),
                        html.H2(children = 'Weekly temperature', style = {'paddingLeft':'30px'}),dropdown,graph, graph2, graph3
