@@ -17,7 +17,8 @@ fig = px.bar(df_weather,
              y='weekly_avg',  
              color='city',
              barmode='group',
-             height=500, title = 'Average temperature',)
+             height=500, width = 1000,
+             title = 'Average temperature',)
 fig.update_xaxes(tickangle=45)   
 
 graph = dcc.Graph(figure=fig)
@@ -32,7 +33,8 @@ graph2 = dcc.Graph(figure=fig2)
 
 #creating the map
 fig3 = px.choropleth(df_weather, locations='alpha-3',
-                    projection='natural earth',
+                    projection='natural earth', 
+                    width=1100, height=800,
                     animation_frame='week-year',
                     scope='world',
                     color='weekly_avg', locationmode='ISO-3',
