@@ -10,8 +10,6 @@ import dash_bootstrap_components as dbc
 
 # reading the data and preparing it for the tables and graphs
 df_weather = pd.read_csv('../data/weather.csv')
-df_weather.head()
-
 
 #creating the bar graph
 fig = px.bar(df_weather, 
