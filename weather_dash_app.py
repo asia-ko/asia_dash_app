@@ -24,6 +24,7 @@ fig.update_xaxes(tickangle=45)
 
 graph = dcc.Graph(figure=fig)
 
+
 #creating the line graph
 fig2 = px.line(df_weather, x='week-year', y='weekly_avg', color='city', title = 'Temperature over years',)
 fig2.update_xaxes(tickangle=45)
