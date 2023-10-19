@@ -38,7 +38,7 @@ fig3 = px.choropleth(df_weather, locations='alpha-3',
                     animation_frame='week-year',
                     scope='world',
                     color='weekly_avg', locationmode='ISO-3',
-                    title = 'Climat in Germany, Italy and USA')
+                    title = 'Climate in Germany, Italy and USA')
 fig3.write_html('map.html')
 graph3 = dcc.Graph(figure=fig3)
 
