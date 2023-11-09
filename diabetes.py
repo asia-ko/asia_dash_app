@@ -14,15 +14,17 @@ fig = px.scatter_3d(diabetes_train, x='HbA1c_level', y='diabetes', z='blood_gluc
                    opacity=0.7)
 
 fig.update_layout(margin=dict(l=1, r=1, b=1, t=1))
+
 fig.write_html('diabetes.html')
 
 graph = dcc.Graph(figure=fig)
 
 app =dash.Dash()
 
+server = app.server
+
 app.layout = html.Div(html.H1(children = 'Logistic regression model'))
 
-server = app.server
 
 if __name__ == '__main__':
     app.run_server()
