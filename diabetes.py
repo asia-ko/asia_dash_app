@@ -4,7 +4,6 @@ from dash import Dash, dcc, html, callback
 from dash.dependencies import Input, Output, State
 import plotly.express as px
 from dash import dash_table
-import dash_bootstrap_components as dbc
 
 
 diabetes_train = pd.read_csv('./data/diabbetes_train.csv')
@@ -20,6 +19,8 @@ fig.write_html('diabetes.html')
 graph = dcc.Graph(figure=fig)
 
 app =dash.Dash()
+
+app.layout = html.Div(html.H1(children = 'Logistic regression model'))
 
 server = app.server
 
