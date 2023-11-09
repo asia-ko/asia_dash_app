@@ -23,7 +23,7 @@ app =dash.Dash()
 
 server = app.server
 
-app.layout = html.Div(html.H1(children = 'Logistic regression model')), graph
+app.layout = html.Div(html.H1(children = 'Logistic regression model'), graph)
 
 
 if __name__ == '__main__':
