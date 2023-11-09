@@ -6,7 +6,7 @@ import plotly.express as px
 from dash import dash_table
 
 
-diabetes_train = pd.read_csv('./data/diabbetes_train.csv')
+diabetes_train = pd.read_csv('./data/diabetes_train.csv')
 
 fig = px.scatter_3d(diabetes_train, x='HbA1c_level', y='diabetes', z='blood_glucose_level',
               color='HbA1c_level',
